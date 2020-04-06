@@ -9,7 +9,11 @@ function App() {
       <div><h2>What region is House Targaryen in?</h2></div>
       <div><h2></h2></div>
       <div><h2>What's the coat of arms of House Lannister?</h2></div>
-      
+      <div><h2></h2></div>
+      <div><h2>What is the second seat of House Baratheon?</h2></div>
+      <div><h2></h2></div>
+ 
+    </div>
   );
 }
 
