@@ -15,7 +15,9 @@ function App() {
       <div><h2>What is Robert Baratheon's second alias?</h2></div>
       <div><h2></h2></div>
       <div><h2>What's the name of the founder of House Stark? (You have to chain fetch requests!)</h2></div>
-
+      <div><h2></h2></div>
+      <div><h2>What are the titles of Catelyn Stark's three POV books?</h2></div>
+      <div><h2></h2></div>
     </div>
   );
 }
