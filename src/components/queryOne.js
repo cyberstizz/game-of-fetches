@@ -1,4 +1,5 @@
 import axios from 'axios';
+import React from 'react';
 
 export default class QueryOne extends React.Component {
     constructor(props){
@@ -8,9 +9,9 @@ export default class QueryOne extends React.Component {
         }
     }
         componentDidMount(){
-            axios.get()
+            axios.get('http://anapioficeandfire.com/api/characters/583')
             .then(res => {
-                let queryOne = res.data;
+                let queryOne = res.data.born;
                 this.setState({
                     data:queryOne
                 })

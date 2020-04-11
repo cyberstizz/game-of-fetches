@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-
+import QueryOne from './components/queryOne'
 
 export default class App extends React.Component{
   constructor(props){
@@ -10,7 +10,7 @@ export default class App extends React.Component{
       return(
 <div>
       <div><h2>What region is House Targaryen in?</h2></div>
-      <div id='query2'><h2></h2></div>
+      <div id='query2'><h2><QueryOne /></h2></div>
       <div><h2>What's the coat of arms of House Lannister?</h2></div>
       <div className='query3'><h2></h2></div>
       <div><h2>What is the second seat of House Baratheon?</h2></div>
