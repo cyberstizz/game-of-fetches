@@ -4,16 +4,13 @@ import React from 'react';
 export default class QueryOne extends React.Component {
     constructor(props){
         super(props)
-        this.state = {
-            data: {}
-        }
     }
         componentDidMount(){
             axios.get('http://anapioficeandfire.com/api/characters/583')
             .then(res => {
                 let queryOne = res.data.born;
                 this.setState({
-                    data:queryOne
+                    data: queryOne
                 })
             }).catch(error =>{
                 console.log(error)
@@ -23,7 +20,8 @@ export default class QueryOne extends React.Component {
     render(){
   return (
     <div>
-      <h3>{this.state.data}</h3>
+        <h2>What region is House Targaryen in?</h2>
+           <h2> {this.props.data}</h2>
   </div>
 )
 }

@@ -1,17 +1,31 @@
 import React from 'react';
 import './App.css';
 import QueryOne from './components/queryOne'
+import axios from 'axios';
 
-export default class App extends React.Component{
-  constructor(props){
-    super(props)
-    this.state = 
+export default class App extends React.Component {
+constructor(props){
+  super(props)
+  this.state = {
+    test: null
   }
+}
+componentDidMount(){
+  axios.get('http://anapioficeandfire.com/api/characters/583')
+  .then(res => {
+      let queryOne = res.data.born;
+      this.setState({
+          data: queryOne
+      })
+  }).catch(error =>{
+      console.log(error)
+  })
+}
+ 
     render(){
-      return(
+ return( 
 <div>
-      <div><h2>What region is House Targaryen in?</h2></div>
-      <div id='query2'><h2><QueryOne /></h2></div>
+  <QueryOne data={this.state.data} />
       <div><h2>What's the coat of arms of House Lannister?</h2></div>
       <div className='query3'><h2></h2></div>
       <div><h2>What is the second seat of House Baratheon?</h2></div>
