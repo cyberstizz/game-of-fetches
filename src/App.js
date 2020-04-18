@@ -12,8 +12,6 @@ constructor(props){
   }
 }
 componentDidMount(){
-
-  http://www.anapioficeandfire.com/api/houses/378
   axios.get("https://www.anapioficeandfire.com/api/houses/378")
   .then(res => {
       this.setState({
@@ -28,8 +26,8 @@ componentDidMount(){
     render(){
  return( 
 <div>
-  <QueryOne data={this.state.data.born} />
-  <QueryTwo data={this.state.data.region} />
+  <QueryOne />
+  <QueryTwo />
       <div className='query3'><h2></h2></div>
       <div><h2>What is the second seat of House Baratheon?</h2></div>
       <div className='query4'><h2></h2></div>
