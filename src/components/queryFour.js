@@ -11,8 +11,9 @@ export default class QueryFour extends React.Component {
     componentDidMount(){
       axios.get("https://www.anapioficeandfire.com/api/houses/17")
       .then(res => {
+          let answerFour = res.data;
           this.setState({
-              data: res.data
+              data: answerFour.seats[1]
           })
       }).catch(error =>{
           console.log(error)
@@ -22,7 +23,7 @@ export default class QueryFour extends React.Component {
     render(){
   return (
     <div>
-        <h2>What is the second seat of House Baratheon? <br/><br/>{this.state.data.seats}</h2>
+        <h2>What is the second seat of House Baratheon? <br/><br/>{this.state.data}</h2>
   </div>
 )
 }
