@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import QueryOne from './components/queryOne'
+import QueryTwo from './components/queryTwo'
 import axios from 'axios';
 
 export default class App extends React.Component {
@@ -11,7 +12,9 @@ constructor(props){
   }
 }
 componentDidMount(){
-  axios.get("https://anapioficeandfire.com/api/characters/16")
+
+  http://www.anapioficeandfire.com/api/houses/378
+  axios.get("https://www.anapioficeandfire.com/api/houses/378")
   .then(res => {
       this.setState({
           data: res.data
@@ -19,14 +22,14 @@ componentDidMount(){
   }).catch(error =>{
       console.log(error)
   })
+
 }
  
     render(){
  return( 
 <div>
-  <QueryOne data={this.state.data} />
-  
-      <div><h2>What's the coat of arms of House Lannister?</h2></div>
+  <QueryOne data={this.state.data.born} />
+  <QueryTwo data={this.state.data.region} />
       <div className='query3'><h2></h2></div>
       <div><h2>What is the second seat of House Baratheon?</h2></div>
       <div className='query4'><h2></h2></div>
