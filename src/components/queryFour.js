@@ -9,7 +9,7 @@ export default class QueryFour extends React.Component {
         }
     }
     componentDidMount(){
-      axios.get("https://anapioficeandfire.com/api/characters/16")
+      axios.get("https://www.anapioficeandfire.com/api/houses/17")
       .then(res => {
           this.setState({
               data: res.data
@@ -22,7 +22,7 @@ export default class QueryFour extends React.Component {
     render(){
   return (
     <div>
-        <h2>What region is House Targaryen in? <br/><br/>{this.state.data.born}</h2>
+        <h2>What is the second seat of House Baratheon? <br/><br/>{this.state.data.seats}</h2>
   </div>
 )
 }

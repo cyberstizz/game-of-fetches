@@ -1,7 +1,11 @@
 import React from 'react';
 import './App.css';
-import QueryOne from './components/queryOne'
-import QueryTwo from './components/queryTwo'
+import QueryOne from './components/queryOne';
+import QueryTwo from './components/queryTwo';
+import QueryThree from './components/queryThree';
+import QueryFour from './components/queryFour'
+import QueryFive from './components/queryFive'
+
 import axios from 'axios';
 
 export default class App extends React.Component {
@@ -11,28 +15,15 @@ constructor(props){
     data: []
   }
 }
-componentDidMount(){
-  axios.get("https://www.anapioficeandfire.com/api/houses/378")
-  .then(res => {
-      this.setState({
-          data: res.data
-      })
-  }).catch(error =>{
-      console.log(error)
-  })
-
-}
  
     render(){
  return( 
 <div>
   <QueryOne />
   <QueryTwo />
-      <div className='query3'><h2></h2></div>
-      <div><h2>What is the second seat of House Baratheon?</h2></div>
-      <div className='query4'><h2></h2></div>
-      <div><h2>What is Robert Baratheon's second alias?</h2></div>
-      <div className='query5'><h2></h2></div>
+  <QueryThree />
+  <QueryFour />
+  <QueryFive />    
       <div><h2>What's the name of the founder of House Stark? (You have to chain fetch requests!)</h2></div>
       <div className='query6'><h2></h2></div>
       <div><h2>What are the titles of Catelyn Stark's three POV books?</h2></div>

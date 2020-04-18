@@ -9,7 +9,7 @@ export default class QueryFive extends React.Component {
         }
     }
     componentDidMount(){
-      axios.get("https://anapioficeandfire.com/api/characters/16")
+      axios.get("https://www.anapioficeandfire.com/api/characters/901")
       .then(res => {
           this.setState({
               data: res.data
@@ -22,7 +22,7 @@ export default class QueryFive extends React.Component {
     render(){
   return (
     <div>
-        <h2>What region is House Targaryen in? <br/><br/>{this.state.data.born}</h2>
+        <h2>What is Robert Baratheon's second alias? <br/><br/>{this.state.data.aliases}</h2>
   </div>
 )
 }
