@@ -11,7 +11,7 @@ export default class QuerySix extends React.Component {
     componentDidMount(){
       axios.get("https://www.anapioficeandfire.com/api/houses/362")
       .then(res => {
-         axios.get(res.data.founder)
+        return axios.get(res.data.founder)
       })
       .then(res => {
           let stark = res;
